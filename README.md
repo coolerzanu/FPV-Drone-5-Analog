@@ -1,7 +1,9 @@
 # FPV Drone
 
 5" Analog FPV Drone
-<img src="Media/FINISH.JPG" alt="Image" width="600">
+
+
+<img src="Media/Final.jpg" alt="Image" height="600">
 
 ## Highlights
 - 5 Inch Propellers
@@ -11,6 +13,9 @@
 
 ## Why I made it!!!
 During the summer of 2025 I received a generous grant of $250 to innovate in engineering. I had previously worked in the field of embedded systems to create a modular forest fire detection system of nodes. While developing this project I noticed its potential implementation on manned UAVs. With this grant I decided to attempt breaking into the UAV industry by assembling my own custom FPV drone. In addition to the engineering, I spent over 30 hours learning to professionally fly FPV drones and have since discovered a new hobby.  
+
+
+<img src="Media/Setup.jpg" alt="Image" height="600">
 
 ## Videos
 
@@ -25,6 +30,32 @@ To keep the build under the $120 budget while maintaining freestyle performance,
 - **Receiver (RX):** ExpressLRS (ELRS) 2.4GHz Nano Receiver
 - **Propellers:** 5.1" 3-blade props
 
+## Basic Progression
+Assembled frame and motors
+<img src="Media/FRAMEO.jpg" alt="Image" height="600">
+
+Looked over ESC Spec sheet and soldered Capacitor and power cable. 
+
+
+<img src="Media/ESC.JPG" alt="Image" height="600">
+
+
+Soldered Motor wires to ESC and attached Flight Controller to form the stack. Had to review spec sheet for off brand Flight Controller to solder VTX, Camera, and Receiver. 
+
+
+<img src="Media/Diagram.PNG" alt="Image" height="600">
+
+Assembled entire drone into finished product and flashed betaflight firmware
+
+<img src="Media/Built.jpg" alt="Image" height="600">
+
+
+View of FPV goggles
+<img src="Media/Goggles.jpg" alt="Image" height="600">
+
+
+Set up outdoors before first flight
+<img src="Media/Outside.jpg" alt="Image" height="600">
 
 
 
