@@ -1,7 +1,7 @@
 # FPV Drone
 
 5" Analog FPV Drone
-<img src="Other/Images/Poster.png" alt=Image" width="600">
+<img src="Media/IMG_5302.HEIC" alt=Image" width="600">
 
 ## Highlights
 - 5 Inch Propellers
