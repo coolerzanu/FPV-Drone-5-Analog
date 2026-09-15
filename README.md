@@ -2,6 +2,10 @@
 
 5" Analog FPV Drone
 
+Music Video and First Flight: https://drive.google.com/file/d/1u81eMg4rBYhqM3jJ49E8gZRlQipSc7sH/view?usp=sharing
+
+(Apologies for the poor VTX quality, the propellers chopped the antenna in half)
+
 
 <img src="Media/Final.jpg" alt="Image" height="600">
 
