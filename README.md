@@ -50,11 +50,20 @@ Assembled entire drone into finished product and flashed betaflight firmware
 <img src="Media/Built.jpg" alt="Image" height="600">
 
 
+
+
 View of FPV goggles
+
+
 <img src="Media/Goggles.jpg" alt="Image" height="600">
 
 
+
+
 Set up outdoors before first flight
+
+
+
 <img src="Media/Outside.jpg" alt="Image" height="600">
 
 
