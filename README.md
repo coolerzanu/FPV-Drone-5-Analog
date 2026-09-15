@@ -12,7 +12,7 @@ Music Video and First Flight: https://drive.google.com/file/d/1u81eMg4rBYhqM3jJ4
 ## Highlights
 - 5 Inch Propellers
 - 200 meter range
-- $120 drone budget
+- $100 drone budget
 - 60 mph top speed
 
 ## Why I made it!!!
