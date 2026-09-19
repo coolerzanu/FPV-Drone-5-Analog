@@ -1,88 +1,116 @@
 # FPV Drone
 
-5" Analog FPV Drone
+A 5 inch analog freestyle FPV quadcopter, built from individually sourced parts on a student budget.
 
-Music Video and First Flight: https://drive.google.com/file/d/1u81eMg4rBYhqM3jJ49E8gZRlQipSc7sH/view?usp=sharing
+![Class](https://img.shields.io/badge/class-5%22%20freestyle-6f42c1)
+![Video](https://img.shields.io/badge/video-5.8GHz%20analog-informational)
+![Link](https://img.shields.io/badge/control-ExpressLRS%202.4GHz-success)
+![Firmware](https://img.shields.io/badge/firmware-Betaflight-blue)
 
-(Apologies for the poor VTX quality, the propellers chopped the antenna in half)
+<img src="Media/Final.jpg" alt="Completed FPV drone" height="600">
 
+[First flight and music video](https://drive.google.com/file/d/1u81eMg4rBYhqM3jJ49E8gZRlQipSc7sH/view?usp=sharing)
 
-<img src="Media/Final.jpg" alt="Image" height="600">
+Video transmission quality in the recorded footage is degraded, because the propellers clipped the VTX antenna mid-session. See [Lessons Learned](#lessons-learned).
 
-## Highlights
-- 5 Inch Propellers
-- 200 meter range
-- $100 drone budget
-- 60 mph top speed
+## Contents
 
-## Why I made it!!!
-During the summer of 2025 I received a generous grant of $250 to innovate in engineering. I had previously worked in the field of embedded systems to create a modular forest fire detection system of nodes. While developing this project I noticed its potential implementation on manned UAVs. With this grant I decided to attempt breaking into the UAV industry by assembling my own custom FPV drone. In addition to the engineering, I spent over 30 hours learning to professionally fly FPV drones and have since discovered a new hobby.  
+- [Overview](#overview)
+- [Specifications](#specifications)
+- [Components](#components)
+- [Build Log](#build-log)
+- [Firmware Configuration](#firmware-configuration)
+- [Lessons Learned](#lessons-learned)
+- [Gallery](#gallery)
 
+## Overview
 
-<img src="Media/Setup.jpg" alt="Image" height="600">
+In the summer of 2025 I received a $250 engineering innovation grant. My prior work was in embedded systems, specifically a modular node network for early forest fire detection, and while developing it I kept reaching the same conclusion: the platform would be far more useful airborne. Mounting the sensor nodes on a UAV turns a fixed grid into a mobile survey tool.
 
-## Videos
+Instead of buying a ready-made airframe, I used the grant to build one, so that every subsystem on it would be one I had specified, soldered, and configured myself. The finished aircraft is a 5 inch analog freestyle quad assembled from individually sourced components and tuned in Betaflight.
 
+I also spent over 30 hours learning to fly it properly, which turned out to be the harder half of the project.
 
-## Basic Overview - Parts
-To keep the build under the $120 budget while maintaining freestyle performance, I carefully sourced the following components:
-- **Frame:** 5" Carbon Fiber Freestyle Frame 
-- **Flight Controller & ESC (Stack):** F405 Flight Controller paired with a 40A-50A 4-in-1 ESC 
-- **Motors:** 2207 or 2306 Brushless Motors
-- **Video Transmitter (VTX):** 5.8GHz Analog VTX
-- **FPV Camera:** 1200TVL Analog Micro Camera
-- **Receiver (RX):** ExpressLRS (ELRS) 2.4GHz Nano Receiver
-- **Propellers:** 5.1" 3-blade props
+<img src="Media/Setup.jpg" alt="Workbench setup" height="600">
 
-## Basic Progression
-Assembled frame and motors
-<img src="Media/FRAMEO.jpg" alt="Image" height="600">
+## Specifications
 
-Looked over ESC Spec sheet and soldered Capacitor and power cable. 
+| | |
+|---|---|
+| Class | 5 inch freestyle quadcopter |
+| Propellers | 5.1 inch, 3 blade |
+| Motors | 2207 or 2306 brushless |
+| Stack | F405 flight controller with 40-50 A 4-in-1 ESC |
+| Video | 5.8 GHz analog VTX, 1200 TVL micro camera |
+| Control link | ExpressLRS 2.4 GHz nano receiver (CRSF) |
+| Firmware | Betaflight |
+| Tested range | approx. 200 m |
+| Top speed | approx. 60 mph |
+| Build cost | approx. $120 in components |
 
+## Components
 
-<img src="Media/ESC.JPG" alt="Image" height="600">
+Parts were sourced individually to stay inside budget without giving up freestyle performance.
 
+| Subsystem | Part | Notes |
+|---|---|---|
+| Frame | 5 inch carbon fiber freestyle frame | |
+| Stack | F405 FC with 40-50 A 4-in-1 ESC | |
+| Motors | 2207 or 2306 brushless, x4 | |
+| VTX | 5.8 GHz analog | SmartAudio control over UART |
+| Camera | 1200 TVL analog micro | |
+| Receiver | ExpressLRS 2.4 GHz nano | CRSF protocol |
+| Propellers | 5.1 inch, 3 blade | |
 
-Soldered Motor wires to ESC and attached Flight Controller to form the stack. Had to review spec sheet for off brand Flight Controller to solder VTX, Camera, and Receiver. 
+## Build Log
 
+### 1. Frame and motors
 
-<img src="Media/Diagram.PNG" alt="Image" height="600">
+Assembled the carbon fiber frame and mounted the four motors, routing the phase wires through the arms.
 
-Assembled entire drone into finished product and flashed betaflight firmware
+<img src="Media/FRAMEO.jpg" alt="Frame and motors assembled" height="600">
 
-<img src="Media/Built.jpg" alt="Image" height="600">
+### 2. Power delivery
 
+Worked through the ESC datasheet, then soldered the low-ESR capacitor across the power pads and attached the battery lead. The capacitor is not optional on an analog build, since it suppresses the voltage ripple that otherwise shows up as noise in the video feed.
 
+<img src="Media/ESC.JPG" alt="ESC with capacitor and power lead soldered" height="600">
 
+### 3. Stack assembly
 
-View of FPV goggles
+Soldered the motor phase wires to the ESC and mated the flight controller to form the stack. The flight controller was an off-brand board, so the pinouts for the VTX, camera, and receiver had to be traced from its datasheet rather than assumed from a standard F405 layout.
 
+<img src="Media/Diagram.PNG" alt="Wiring diagram" height="600">
 
-<img src="Media/Goggles.jpg" alt="Image" height="600">
+### 4. Final assembly and flashing
 
+Closed up the airframe, mounted the camera and antennas, and flashed Betaflight.
 
+<img src="Media/Built.jpg" alt="Completed build" height="600">
 
+## Firmware Configuration
 
-Set up outdoors before first flight
+Betaflight handles flight dynamics and hardware communication. The setup sequence was:
 
+1. Flashing and ports. Flashed the current firmware target to the flight controller, then mapped the UART ports for the ELRS receiver and VTX SmartAudio.
+2. Receiver. Set the protocol to CRSF for the ExpressLRS link.
+3. Modes. Bound transmitter switches to arming, flight modes (Acro and Angle), and Turtle Mode for flip-over-after-crash recovery.
+4. OSD. Configured the analog overlay to display battery voltage, link quality, and flight timer in the goggles.
 
+## Lessons Learned
 
-<img src="Media/Outside.jpg" alt="Image" height="600">
+Antenna placement needs to be treated as a structural decision. The VTX antenna sat inside the propeller disc and was cut in half during flight, which is why the recorded footage degrades. Mounting it behind the rear arms, above the prop plane, would have avoided the problem.
 
+Off-brand flight controllers cost time rather than money. The savings on the stack were real, but the undocumented pinout added hours of datasheet tracing that a mainstream board would not have required.
 
+Learning to fly took far longer than building. The build itself was a fraction of the 30+ hours that acro practice took, which is worth planning for on a fixed timeline.
 
-## Basic Overview - Betaflight Firmware
-The drone's software relies on Betaflight to manage flight dynamics and hardware communication. The setup process included:
-1. **Flashing & Ports:** Flashed the latest firmware target to the Flight Controller and configured the UART ports for the ELRS receiver and VTX SmartAudio.
-2. **Receiver Configuration:** Set the receiver protocol to CRSF to communicate seamlessly with the ExpressLRS system.
-3. **Modes Setup:** Programmed the radio transmitter switches for Arming, Flight Modes (Acro/Angle), and Turtle Mode (Flip Over After Crash).
-4. **OSD (On-Screen Display):** Customized the analog video overlay to display critical real-time telemetry, including battery voltage, link quality, and flight time.
+## Gallery
 
+FPV goggles
 
+<img src="Media/Goggles.jpg" alt="FPV goggles" height="600">
 
+Field setup before the first flight
 
-
-
-# Credits
-- Written with [StackEdit](https://stackedit.io/).
+<img src="Media/Outside.jpg" alt="Outdoor setup before first flight" height="600">
